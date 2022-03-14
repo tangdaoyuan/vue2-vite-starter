@@ -12,6 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.husky
 
 /cypress/videos/
 /cypress/screenshots/

@@ -2,7 +2,7 @@
   "name": "tdy-vue2-vite-template",
   "version": "0.0.1",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "./init-husky.sh",
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -20,6 +20,8 @@
     "vue-router": "^3.5.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@cypress/vite-dev-server": "^2.2.1",
     "@cypress/vue": "^2.2.4",
     "@types/node": "^16.11.10",

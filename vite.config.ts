@@ -11,6 +11,11 @@ import { viteMockServe } from 'vite-plugin-mock';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
+  css: {
+    preprocessorOptions: {
+      scss: { charset: false }
+    }
+  },
   plugins: [
     vue2({
       jsx: true,
@@ -33,5 +38,8 @@ export default defineConfig(({ command }) => ({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  optimizeDeps: {
+    exclude: ['vue-demi']
   }
 }));

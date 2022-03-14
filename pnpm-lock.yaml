@@ -12,6 +12,7 @@ specifiers:
   '@vue/eslint-config-prettier': ^7.0.0
   '@vue/eslint-config-typescript': ^10.0.0
   '@vue/runtime-dom': ^3.2.31
+  '@vueuse/core': ^8.0.1
   axios: ^0.26.1
   cypress: ^9.1.0
   eslint: ^8.11.0
@@ -31,6 +32,7 @@ specifiers:
   vite-plugin-mock: ^2.9.6
   vite-plugin-vue2: ^1.9.3
   vue: ^2.6.14
+  vue-demi: ^0.12.1
   vue-router: ^3.5.3
   vue-template-babel-compiler: 1.1.3
   vue-template-compiler: ^2.6.14
@@ -39,10 +41,12 @@ specifiers:
 
 dependencies:
   '@vue/composition-api': 1.4.9_vue@2.6.14
+  '@vueuse/core': 8.0.1_8414dc0546a7fec2b290b41e4edbca0b
   axios: 0.26.1
   pinia: 2.0.11_f64012f46f1f50acf8a66cbe752d229b
   uuid: 8.3.2
   vue: 2.6.14
+  vue-demi: 0.12.1_8414dc0546a7fec2b290b41e4edbca0b
   vue-router: 3.5.3
 
 devDependencies:
@@ -1767,6 +1771,28 @@ packages:
       vue-demi: 0.12.1_ac2a42527c362575429f172d82b9d821
     dev: true
 
+  /@vueuse/core/8.0.1_8414dc0546a7fec2b290b41e4edbca0b:
+    resolution: {integrity: sha512-LQ5pyxALWMZikNWzW2CTs/RfTyT0O3oYDl7jJhfckY0q/dLe2SCy5vX4+f6c2LFjG9M+sXRugne+W4t1I/wXUA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      '@vue/composition-api': 1.4.9_vue@2.6.14
+      '@vueuse/metadata': 8.0.1
+      '@vueuse/shared': 8.0.1_8414dc0546a7fec2b290b41e4edbca0b
+      vue: 2.6.14
+      vue-demi: 0.12.1_8414dc0546a7fec2b290b41e4edbca0b
+    dev: false
+
+  /@vueuse/metadata/8.0.1:
+    resolution: {integrity: sha512-+Y2TSsgliQMzqcRMcuX28XHrxojrZYGiBKzW05/mkPmlYGlUSOauF9pvyyslH0V4HfzCsg3CDKJhCnBLWKqN0w==}
+    dev: false
+
   /@vueuse/shared/7.7.1_ac2a42527c362575429f172d82b9d821:
     resolution: {integrity: sha512-rN2qd22AUl7VdBxihagWyhUNHCyVk9IpvBTTfHoLH9G7rGE552X1f+zeCfehuno0zXif13jPw+icW/wn2a0rnQ==}
     peerDependencies:
@@ -1782,6 +1808,22 @@ packages:
       vue: 3.2.31
       vue-demi: 0.12.1_ac2a42527c362575429f172d82b9d821
     dev: true
+
+  /@vueuse/shared/8.0.1_8414dc0546a7fec2b290b41e4edbca0b:
+    resolution: {integrity: sha512-PZf84+DHWUnIKNhvIxL335uWjjfIeEhYjRFilDqEWB/t4yHfNbZxDpT+4OgiLtgdCcGG1JKryNI7nkY9TyEu6w==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      '@vue/composition-api': 1.4.9_vue@2.6.14
+      vue: 2.6.14
+      vue-demi: 0.12.1_8414dc0546a7fec2b290b41e4edbca0b
+    dev: false
 
   /JSONStream/1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==}

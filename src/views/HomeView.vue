@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { onMounted } from '@vue/composition-api';
+import { onMounted } from 'vue-demi';
+import { useMouse } from '@vueuse/core';
 import { useUserStore } from '@/stores/user';
+
+const { x, y } = useMouse();
 
 const store = useUserStore();
 onMounted(() => {
@@ -10,16 +13,24 @@ onMounted(() => {
 
 <template>
   <div class="home">
-    <h1>This is an Home page - {{ store.username }}</h1>
+    <section class="section">
+      <h1>This is an Home page - {{ store.username }}</h1>
+      <p>{{ x }} / {{ y }}</p>
+    </section>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+<style lang="scss">
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .section {
+    width: 100%;
+    text-align: center;
   }
 }
 </style>

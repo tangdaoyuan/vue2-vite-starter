@@ -1,0 +1,10 @@
+// Global Scss
+@import "./_reset.scss";
+@import "./_override.scss";
+
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+}

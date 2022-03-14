@@ -6,6 +6,8 @@
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "preview": "vite preview --port 5050",
     "test:unit": "cypress open-ct",
     "test:unit:ci": "cypress run-ct --quiet --reporter spec",
@@ -49,6 +51,7 @@
     "vite-plugin-vue2": "^1.9.3",
     "vue-template-babel-compiler": "1.1.3",
     "vue-template-compiler": "^2.6.14",
-    "vue-tsc": "^0.31.4"
+    "vue-tsc": "^0.31.4",
+    "vuepress": "^2.0.0-beta.36"
   }
 }

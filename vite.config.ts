@@ -8,6 +8,7 @@ import { createVuePlugin as vue2 } from 'vite-plugin-vue2';
 // @ts-ignore
 import vueTemplateBabelCompiler from 'vue-template-babel-compiler';
 import scriptSetup from 'unplugin-vue2-script-setup/vite';
+import Inspect from 'vite-plugin-inspect';
 import { viteMockServe } from 'vite-plugin-mock';
 
 // https://vitejs.dev/config/
@@ -25,7 +26,8 @@ export default defineConfig(({ command, mode }) => {
     legacy({
       targets: ['ie >= 11'],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime']
-    })
+    }),
+    Inspect()
   ];
 
   if (mode === 'mock') {

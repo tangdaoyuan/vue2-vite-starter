@@ -28,6 +28,12 @@ chmod +x ./init-husky.sh && sh ./init-husky.sh && pnpm install
 pnpm dev
 ```
 
+### Compile and Hot-Reload for Mock
+
+```sh
+pnpm mock
+```
+
 ### Type-Check, Compile and Minify for Production
 
 ```sh

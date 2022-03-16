@@ -4,6 +4,7 @@
   "scripts": {
     "prepare": "./init-husky.sh",
     "preinstall": "npx only-allow pnpm",
+    "mock": "vite --mode mock",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "docs:dev": "vuepress dev docs",

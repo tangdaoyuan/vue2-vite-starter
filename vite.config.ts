@@ -38,7 +38,12 @@ export default defineConfig(({ command, mode }) => {
       })
     );
   } else {
-    const ENV = loadEnv(mode, process.cwd());
+    let ENV: any = {};
+    try {
+      ENV = loadEnv(mode, process.cwd());
+    } catch (error) {
+      console.error(error);
+    }
     server = {
       host: '0.0.0.0',
       open: true,
